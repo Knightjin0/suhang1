@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+{% block mid %}
+
+<div class="card">
+  <div class="card-header">
+    상품등록
+  </div>
+  <center>
+  <div class="card-body">
+    <form enctype="multipart/form-data" method="post" action="/products/registrationProcess" style="width:300px ;">
+      <div class="input-group mb-3">
+        <select required name="productCategory" class="form-select" aria-label="Default select example">
+          <option value="" selected>종류</option>
+          <option value="1">자유</option>
+          <option value="2">유머</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">제목</span>
+        <input required type="text" name="productName" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">내용</span>
+        <input required type="text" name="productQuantity" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">이미지</span>
+        <input type="file" name="productImg" class="form-control" >
+      </div>
+      <input type="submit" value="상품등록" class="btn btn-outline-primary"></input>
+    </form>
+  </div>
+</div>
+</center>
+
+{% endblock %}
